@@ -1,0 +1,20 @@
+version: '3'
+
+services:
+  front:
+    build:
+      context: ../
+      dockerfile: ./docker/front.dockerfile
+    container_name: 'hackathon-front'
+    ports:
+      - 1337:80
+    depends_on:
+      - api
+
+  api:
+    build:
+      context: ../
+      dockerfile: ./docker/api.dockerfile
+    container_name: 'hackathon-api'
+    ports:
+      - 5000:8000
