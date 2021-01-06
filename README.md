@@ -46,6 +46,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 
 ###### Install backend
 
+## How to install
+
 # Linux
 
 ```bash
@@ -57,12 +59,18 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 ```
 
 # Windows
-In cmd, get into .\hackathoooon\API.
-Then run ```python3 -m venv venv```.
-Then in .\hackathoooon\API\venv\Scripts, run ```activate.bat```.
-You now should have "(venv)" at the beginning of your command line (for example (venv) C:\why\not\Zoidberg).
-In .\hackathoooon\API, run ```pip install -r requirements.txt```.
-Then run ```python3 main.py```.
+In cmd, get into `.\hackathoooon\API`.
+
+Then run `python3 -m venv venv`.
+
+Then in `.\hackathoooon\API\venv\Scripts`, run `activate.bat`.
+
+You now should have `(venv)` at the beginning of your command line prompt (for example `(venv) C:\why\not\Zoidberg`).
+
+In `.\hackathoooon\API`, run `pip install -r requirements.txt`.
+
+Then run `python3 main.py`.
+
 Then go to http://localhost:5000/ on your favorite web browser, and voilà.
 
-PS : if ```python3``` doesn't work, use your PATH name to Python (```python_path_name -m venv venv```)
+PS : if `python3` doesn't work, use your PATH name to Python (`python_path_name -m venv venv`)
