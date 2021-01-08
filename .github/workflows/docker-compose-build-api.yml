@@ -2,6 +2,7 @@ name: Build only the api and run all docker containers
 
 # Run this workflow every time a new commit pushed to your repository
 on:
+  workflow_dispatch:
   push:
     branches:
       - master
