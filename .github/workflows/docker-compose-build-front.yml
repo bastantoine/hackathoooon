@@ -7,6 +7,9 @@ on:
       - master
     paths:
       - 'front-end/**'
+      - 'docker/docker-compose.yml'
+      - 'docker/front.dockerfile'
+      - 'docker/nginx.conf'
 
 jobs:
   docker-build:

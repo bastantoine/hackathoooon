@@ -7,6 +7,8 @@ on:
       - master
     paths:
       - 'api/**'
+      - 'docker/docker-compose.yml'
+      - 'docker/api.dockerfile'
 
 jobs:
   docker-build:
