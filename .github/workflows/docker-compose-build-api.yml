@@ -1,15 +1,17 @@
-name: Build docker containers
+name: Build only the api and run all docker containers
 
 # Run this workflow every time a new commit pushed to your repository
 on:
   push:
     branches:
       - master
+    paths:
+      - 'api/**'
 
 jobs:
   docker-build:
     # Name the Job
-    name: Build docker containers
+    name: Build only the api and run all docker containers
     # Set the type of machine to run on
     runs-on: self-hosted
 
@@ -18,8 +20,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
-      - name: Build docker-compose stack
-        run: docker-compose build
+      - name: Build only the api container using docker-compose
+        run: docker-compose build api
         working-directory: ./docker
 
       - name: Run docker containers
