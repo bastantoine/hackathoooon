@@ -1,5 +1,7 @@
 # hackathoooon
 
+The project requires python3 and pip.
+
 ## How to install and run the project in dev mode
 
 1. Clone the repo:
