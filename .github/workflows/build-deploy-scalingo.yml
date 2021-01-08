@@ -35,6 +35,7 @@ jobs:
       - name: Commit and push to deploy branch
         uses: EndBug/add-and-commit@v6
         with:
-          add: API/build/.
-          github_token: ${{ secrets.GITHUB_TOKEN }}
+          add: '--force API/build'
+          token: ${{ secrets.GITHUB_TOKEN }}
           branch: 'deploy-scalingo'
+          message: 'Deploying ${{ github.sha }}'
