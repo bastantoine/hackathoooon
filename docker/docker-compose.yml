@@ -7,7 +7,7 @@ services:
       dockerfile: ./docker/front.dockerfile
     container_name: 'hackathon-front'
     ports:
-      - 1337:80
+      - 5002:80
     depends_on:
       - api
 
