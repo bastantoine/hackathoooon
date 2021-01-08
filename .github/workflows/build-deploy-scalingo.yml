@@ -31,8 +31,9 @@ jobs:
         run: cp -a front-end/build API
         working-directory: ./
 
-      - name: Push to deploy branch
-        uses: ad-m/github-push-action@master
+      - name: Commit and push to deploy branch
+        uses: EndBug/add-and-commit@v6
         with:
+          add: API/build/.
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: 'deploy-scalingo'
