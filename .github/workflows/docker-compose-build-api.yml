@@ -6,7 +6,7 @@ on:
     branches:
       - master
     paths:
-      - 'api/**'
+      - 'API/**'
       - 'docker/docker-compose.yml'
       - 'docker/api.dockerfile'
 
