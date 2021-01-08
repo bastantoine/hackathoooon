@@ -17,4 +17,4 @@ services:
       dockerfile: ./docker/api.dockerfile
     container_name: 'hackathon-api'
     ports:
-      - 5000:8000
+      - 5003:8000
