@@ -1,0 +1,27 @@
+name: Build docker containers
+
+# Run this workflow every time a new commit pushed to your repository
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  docker-build:
+    # Name the Job
+    name: Build docker containers
+    # Set the type of machine to run on
+    runs-on: self-hosted
+
+    steps:
+      # Checks out a copy of your repository on the ubuntu-latest machine
+      - name: Checkout code and
+        uses: actions/checkout@v2
+
+      - name: Build docker-compose stack
+        run: docker-compose build
+        working_dir: ./docker
+
+      - name: Run docker containers
+        run: docker-compose up -d
+        working_dir: ./docker
