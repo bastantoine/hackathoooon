@@ -4,7 +4,10 @@ on:
   push:
     branches:
       - master
-
+    paths:
+      - 'API/**'
+      - 'front-end/**'
+      - 'docker/**'
 jobs:
   build-deploy-scalingo:
     name: Build and deploy on Scalingo
