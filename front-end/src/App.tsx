@@ -16,7 +16,7 @@ function App() {
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
         <p>
-          <img src="https://i.kym-cdn.com/entries/icons/original/000/029/079/hellothere.jpg" />
+          <img src="https://i.kym-cdn.com/entries/icons/original/000/029/079/hellothere.jpg" alt="hello there!" />
           <br/>
           Hello there !
         </p>
