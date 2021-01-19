@@ -1,6 +1,6 @@
 Création d'une API "mock" de données d'emploi du temps afin de remplacer les données de PASS.
 
-Recherche infructueuse d'une librairie ReactJS pour l'affichage d'un calendrier donnant les itinéraires des prochains cours.
+Recherche infructueuse d'une librairie ReactJS pour l'affichage d'un calendrier donnant la localisation des prochains cours.
 Nous nous sommes rabattus sur l'affichage du prochain cours seulement.
 
 Recherche fructueuse de librairie afin de générer et afficher une carte.
