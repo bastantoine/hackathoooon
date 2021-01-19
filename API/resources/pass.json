@@ -1,0 +1,114 @@
+{
+  "1": {
+    "lastname": "Dumestre",
+    "firstname": "Lucas",
+    "calendar": {
+      "01-19-2021": [
+        {
+          "start": "8:15",
+          "end": "12:15",
+          "name": "Hackathon",
+          "location": "F212"
+        },
+        {
+          "start": "13:30",
+          "end": "17:45",
+          "name": "Service",
+          "location": "F213"
+        }
+      ],
+      "01-20-2021": [
+        {
+          "start": "8:15",
+          "end": "12:15",
+          "name": "Hackathon",
+          "location": "F212"
+        },
+        {
+          "start": "13:30",
+          "end": "17:45",
+          "name": "Hackathon",
+          "location": "F212"
+        }
+      ],
+      "01-21-2021": [
+        {
+          "start": "8:15",
+          "end": "12:15",
+          "name": "Revue de projet",
+          "location": "F114"
+        }
+      ],
+      "01-22-2021": [
+        {
+          "start": "8:15",
+          "end": "12:15",
+          "name": "Hackathon",
+          "location": "F212"
+        },
+        {
+          "start": "13:30",
+          "end": "17:45",
+          "name": "Hackathon",
+          "location": "F212"
+        }
+      ]
+    }
+  },
+  "2": {
+    "lastname": "Antoine",
+    "firstname": "Bastien",
+    "calendar": {
+      "01-19-2021": [
+        {
+          "start": "8:15",
+          "end": "12:15",
+          "name": "Hackathon",
+          "location": "F212"
+        },
+        {
+          "start": "13:30",
+          "end": "17:45",
+          "name": "Service",
+          "location": "F213"
+        }
+      ],
+      "01-20-2021": [
+        {
+          "start": "8:15",
+          "end": "12:15",
+          "name": "Hackathon",
+          "location": "F212"
+        },
+        {
+          "start": "13:30",
+          "end": "17:45",
+          "name": "Hackathon",
+          "location": "F212"
+        }
+      ],
+      "01-21-2021": [
+        {
+          "start": "8:15",
+          "end": "12:15",
+          "name": "Revue de projet",
+          "location": "F114"
+        }
+      ],
+      "01-22-2021": [
+        {
+          "start": "8:15",
+          "end": "12:15",
+          "name": "Hackathon",
+          "location": "F212"
+        },
+        {
+          "start": "13:30",
+          "end": "17:45",
+          "name": "Hackathon",
+          "location": "F212"
+        }
+      ]
+    }
+  }
+}
