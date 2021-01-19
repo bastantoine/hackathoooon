@@ -35,7 +35,7 @@ jobs:
         run: |
           git push -d origin deploy-scalingo
           git checkout -b deploy-scalingo
-          git push
+          git push --set-upstream origin deploy-scalingo
         working-directory: ./
 
       - name: Commit and push to deploy branch
