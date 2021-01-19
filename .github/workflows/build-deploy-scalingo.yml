@@ -33,7 +33,6 @@ jobs:
 
       - name: Recreate branch to make sure we're up to date
         run: |
-          git branch -D deploy-scalingo
           git push -d origin deploy-scalingo
           git checkout -b deploy-scalingo
           git push
