@@ -2,7 +2,7 @@ import os
 
 from flask import (
     Flask,
-    send_from_directory,
+    send_from_directory, request,
 )
 from flask_cors import CORS
 import requests
@@ -15,17 +15,20 @@ CORS(app)
 def main():
     return 'Hello there!'
 
-@app.route('/covid')
-def covid_controller():
-    uri = "https://coronavirusapi-france.now.sh/LiveDataByDepartement?Departement=Loire-Atlantique"
-    try:
-        uResponse = requests.get(uri)
-    except requests.ConnectionError:
-        return "Connection Error"
-    Jresponse = uResponse.text
-    data = json.loads(Jresponse)
+@app.route('/mock/pass/calendar')
+def pass_controller():
+    # We get the user Id from the url
+    user = request.args.get('user', default = '1', type = str)
 
-    return data["LiveDataByDepartement"][0]
+    # We open the json resources which contains all our calendars.
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "resources", "pass.json")
+    with open(json_url) as json_file:
+        data = json.load(json_file)
+
+    # We fetch the calendar corresponding to the specified user
+    calendar = data.get(user, {})
+    return calendar
 
 
 ############################
