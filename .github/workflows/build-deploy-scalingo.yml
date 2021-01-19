@@ -31,6 +31,14 @@ jobs:
         run: cp -a front-end/build API
         working-directory: ./
 
+      - name: Recreate branch to make sure we're up to date
+        run: |
+          git branch -D deploy-scalingo
+          git push -d origin deploy-scalingo
+          git checkout -b deploy-scalingo
+          git push
+        working-directory: ./
+
       - name: Commit and push to deploy branch
         uses: EndBug/add-and-commit@v6
         with:
