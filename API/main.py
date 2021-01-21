@@ -1,35 +1,28 @@
 import os
 
-from flask import (
-    Flask,
-    request,
-)
+from flask import Flask
 from flask_cors import CORS
-import json
 
-from front import front
+def init_app():
+    """Initialize the core application."""
+    app = Flask(__name__)
 
-app = Flask(__name__)
-CORS(app)
+    # Initialize Plugins
+    CORS(app)
 
-app.register_blueprint(front)
+    with app.app_context():
+        # Include our Routes
+        from views.front import front
+        from views.pass_api import pass_api
 
-@app.route('/mock/pass/calendar')
-def pass_controller():
-    # We get the user Id from the url
-    user = request.args.get('user', default = '1', type = str)
+        # Register Blueprints
+        app.register_blueprint(front)
+        app.register_blueprint(pass_api)
 
-    # We open the json resources which contains all our calendars.
-    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-    json_url = os.path.join(SITE_ROOT, "resources", "pass.json")
-    with open(json_url) as json_file:
-        data = json.load(json_file)
-
-    # We fetch the calendar corresponding to the specified user
-    calendar = data.get(user, {})
-    return calendar
+        return app
 
 if __name__ == "__main__":
+    app = init_app()
     try:
         DEPLOY_SCALINGO = bool(int(os.environ.get('DEPLOY_SCALINGO', 0)))
     except ValueError:
