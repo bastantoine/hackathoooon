@@ -16,10 +16,12 @@ def init_app():
         # Include our Routes
         from views.front import front
         from views.pass_api import pass_api
+        from views.rooms import rooms
 
         # Register Blueprints
         app.register_blueprint(front)
         app.register_blueprint(pass_api)
+        app.register_blueprint(rooms)
 
         return app
 
