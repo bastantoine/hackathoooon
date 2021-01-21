@@ -10,19 +10,17 @@ The project requires python3 and pip.
 > cd hackathoooon
 ```
 
-2. Install and run the React app
+2. Install and run the project
 
-```
-> cd front-end
-> npm install
-> npm start
-```
+First you will need to configure the projet.
 
-The React app should have been launched now, and can be accessed in your browser at localhost:3000.
+To do so, make a copy of `API/.env.sample` into `API/.env` (yes, only `.env`).
 
-3. Install and run the API
+In this file, you should see one line: `API_URL = http://127.0.0.1:5000`. This is the root url to use to reach the API.
 
-In an other terminal (make sure you are in the root directory of the repo):
+If you run everything locally, leave it like this. Otherwise I assume you know what to put there.
+
+In a terminal (make sure you are in the root directory of the repo):
 
 ```
 > python3 -m venv venv
@@ -32,6 +30,6 @@ In an other terminal (make sure you are in the root directory of the repo):
 > export FLASK_ENV=development; python main.py
 ```
 
-And now the API should be live too at localhost:5000
+And now the project should be live at localhost:5000
 
 If you have trouble installing the Python virtualenv (`python3 -m venv venv`) on Windows, see the troubleshooting steps [here](https://github.com/bastantoine/hackathoooon/tree/master/API#windows).

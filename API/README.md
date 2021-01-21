@@ -2,7 +2,17 @@
 
 ## How to install
 
-# Linux
+### Configure the `.env` file
+
+First you will need to configure the projet.
+
+To do so, make a copy of `API/.env.sample` into `API/.env` (yes, only `.env`).
+
+In this file, you should see one line: `API_URL = http://127.0.0.1:5000`. This is the root url to use to reach the API.
+
+If you run everything locally, leave it like this. Otherwise I assume you know what to put there.
+
+### Linux
 
 ```bash
 > python3 -m venv venv
@@ -12,7 +22,8 @@
 > export FLASK_ENV=development; python main.py
 ```
 
-# Windows
+### Windows
+
 In cmd, get into `.\hackathoooon\API`.
 
 Then run `python3 -m venv venv`.
