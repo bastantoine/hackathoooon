@@ -29,9 +29,6 @@ def pass_controller():
     calendar = data.get(user, {})
     return calendar
 
-import front
-
-
 ############################
 # ROUTES FOR SCALINGO ONLY #
 ############################

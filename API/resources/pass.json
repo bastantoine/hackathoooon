@@ -3,6 +3,14 @@
     "lastname": "Dumestre",
     "firstname": "Lucas",
     "calendar": {
+      "Monday": [
+        {
+          "start": "8:15",
+          "end": "12:15",
+          "name": "Sport",
+          "location": "B01-014A"
+        }
+      ],
       "Tuesday": [
         {
           "start": "8:15",
@@ -52,13 +60,23 @@
           "name": "Hackathon",
           "location": "B03-036A"
         }
-      ]
+      ],
+      "Saturday": [],
+      "Sunday": []
     }
   },
   "2": {
     "lastname": "Antoine",
     "firstname": "Bastien",
     "calendar": {
+      "Monday": [
+        {
+          "start": "8:15",
+          "end": "12:15",
+          "name": "Sport",
+          "location": "B01-014A"
+        }
+      ],
       "Tuesday": [
         {
           "start": "8:15",
@@ -108,7 +126,9 @@
           "name": "Hackathon",
           "location": "B03-036A"
         }
-      ]
+      ],
+      "Saturday": [],
+      "Sunday": []
     }
   }
 }
