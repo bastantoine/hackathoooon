@@ -5,15 +5,14 @@ from flask import (
     send_from_directory, request,
 )
 from flask_cors import CORS
-import requests
 import json
+
+from front import front
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route('/')
-def main():
-    return 'Hello there!'
+app.register_blueprint(front)
 
 @app.route('/mock/pass/calendar')
 def pass_controller():
@@ -29,6 +28,8 @@ def pass_controller():
     # We fetch the calendar corresponding to the specified user
     calendar = data.get(user, {})
     return calendar
+
+import front
 
 
 ############################
