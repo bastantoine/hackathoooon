@@ -3,6 +3,8 @@ import os
 from flask import Flask
 from flask_cors import CORS
 
+import db
+
 def init_app():
     """Initialize the core application."""
     app = Flask(__name__)
@@ -33,6 +35,7 @@ if __name__ == "__main__":
             port = int(os.environ.get("PORT", 5000))
         except ValueError:
             port = 5000
+        db.init_db()
         app.run(host='0.0.0.0', port=port)
     else:
         app.run()
