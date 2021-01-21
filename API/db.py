@@ -34,6 +34,19 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
+def insert(table, params):
+    columns, values = [], []
+    for key, value in params.items():
+        columns.append(key)
+        values.append(f"'{value}'")
+    query = f"INSERT INTO {table} ({', '.join(columns)}) VALUES ({', '.join(values)})"
+    # print(f"Running {query}")
+    with app.app_context():
+        db = get_db()
+        db.cursor().execute(query)
+        db.commit()
+        db.close()
+
 def init_db():
     with app.app_context():
         db = get_db()
