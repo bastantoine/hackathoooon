@@ -36,6 +36,12 @@ def import_geojson_files():
 
     return render_template('import.html')
 
+@rooms.route('/rooms/clean')
+def clean_db():
+    from db import init_db
+    init_db()
+    return render_template('import.html', success_message = 'Database emptied')
+
 def insert_features_in_db(filename, geo_json):
 
     from db import insert
