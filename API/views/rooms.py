@@ -91,12 +91,18 @@ def insert_features_in_db(filename, geo_json):
                 room_name = f"{building_name}-{room_name}"
             _point_type = get_key_or_raise(properties, 'type')
             point_type = room_types.get(_point_type, _point_type)
-            linked_to = get_key_or_raise(properties, 'linked_to').replace(' ,', '|').replace(' ', '')
+            linked_to = []
+            _linked_to = get_key_or_raise(properties, 'linked_to').split(',')
+            for linked_point in _linked_to:
+                linked_point = linked_point.strip()
+                if not linked_point.startswith(building_name):
+                    linked_point = f"{building_name}-{linked_point}"
+                linked_to.append(linked_point)
             insert('points', {
                 'name': room_name,
                 'point_type': point_type,
                 'geometry': '|'.join([f"{x};{y}" for x, y in coordinates]),
-                'linked_to': linked_to,
+                'linked_to': '|'.join(linked_to),
             })
             message.append(f"Inserting point for {point_type} {room_name}")
 
