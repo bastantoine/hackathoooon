@@ -1,8 +1,7 @@
-import json
-
 from flask import (
     Blueprint,
     request,
+    jsonify
 )
 
 from graph import get_geometry_itinerary
@@ -18,9 +17,9 @@ def get_itinerary():
     print(start, destination)
 
     if start is None:
-        return "The starting room is undefined"
+        return jsonify({"error": "The starting room is undefined"})
     if destination is None:
-        return "The destination room is undefined"
+        return jsonify({"error": "The destination room is undefined"})
 
     itinerary = get_geometry_itinerary(start, destination)
 
@@ -46,4 +45,4 @@ def get_itinerary():
 
         geo_json["features"].append(features)
 
-    return json.dumps(geo_json, indent = 4)
+    return jsonify(geo_json)
