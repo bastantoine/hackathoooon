@@ -72,7 +72,7 @@ def insert_features_in_db(filename, geo_json):
         if geometry_type == 'MultiPolygon':
             coordinates = coordinates[0][0]
             room_name = get_key_or_raise(properties, 'salle')
-            if not room_name.startswith(building_name):
+            if not room_name.startswith('B1-') and not room_name.startswith('B3-'):
                 room_name = f"{building_name}-{room_name}"
             room_type = room_types[get_key_or_raise(properties, 'type')]
 
@@ -95,7 +95,7 @@ def insert_features_in_db(filename, geo_json):
             _linked_to = get_key_or_raise(properties, 'linked_to').split(',')
             for linked_point in _linked_to:
                 linked_point = linked_point.strip()
-                if not linked_point.startswith(building_name):
+                if not linked_point.startswith('B1-') and not linked_point.startswith('B3-'):
                     linked_point = f"{building_name}-{linked_point}"
                 splited = linked_point.split(';')
                 if len(splited) == 2:
