@@ -41,3 +41,9 @@ On your browser, go on localhost:5000/rooms/import
 Select in your files the geojson files containing the geographical data of the campus.
 
 Press the "Send" button.
+
+## Database explanation
+
+The rooms are defined by a list of points which make a polygon, in the geojson files and in the database.
+Each room has a type, which defines if they are an usual room, a corridor (so not an ending destination) or a staircase.
+Doors position are also stored, and the serve as end nodes for the graph that represents the different roads between rooms.
