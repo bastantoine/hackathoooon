@@ -34,7 +34,7 @@ def geojson_floor1():
 @geometry.route('/geometry/contour')
 def geojson_contour():
     SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
-    json_url = os.path.join(SITE_ROOT, "resources", "CONTOUR.json")
+    json_url = os.path.join(SITE_ROOT, "resources", "GEOJSON/CONTOUR.geojson")
     with open(json_url) as json_file:
         data = json_file.read()
     return(data)

@@ -7,7 +7,12 @@ from datetime import datetime, timedelta
 
 load_dotenv()
 
-front = Blueprint('front', __name__, template_folder='templates/front')
+front = Blueprint('front',
+                  __name__,
+                  template_folder='templates/front',
+                  static_url_path='',
+                  static_folder='static/front',
+                )
 @front.route('/')
 def template_test():
     # We get the user information from our mocked API
@@ -15,7 +20,7 @@ def template_test():
 
     course = get_current_or_next_course(user_data)
 
-    return render_template('template.html', course=course)
+    return render_template('template.html', course=course, api_url=os.environ.get('API_URL', ''))
 
 def get_current_or_next_course(user_data):
     user_calendar = json.loads(user_data.text)['calendar']
