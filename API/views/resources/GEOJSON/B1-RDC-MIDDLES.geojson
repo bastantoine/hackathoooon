@@ -1,0 +1,29 @@
+{
+"type": "FeatureCollection",
+"name": "B1-RDC-MIDDLES",
+"crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
+"features": [
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C02-5", "room": "002A" }, "geometry": { "type": "Point", "coordinates": [ -4.570080842540304, 48.358699455311573 ] } },
+{ "type": "Feature", "properties": { "type": "couloir", "linked_to": "002A, 004A, 0C02-4;1, 0C01-1;1", "room": "0C02-5" }, "geometry": { "type": "Point", "coordinates": [ -4.570101963184145, 48.358675998260111 ] } },
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C02-5", "room": "004A" }, "geometry": { "type": "Point", "coordinates": [ -4.570071053330928, 48.358673461742541 ] } },
+{ "type": "Feature", "properties": { "type": "couloir", "linked_to": "0C02-4;1, 0C02-5;1, 0C02-3;1, 006A", "room": "0C02-4" }, "geometry": { "type": "Point", "coordinates": [ -4.57007388180442, 48.35863203047181 ] } },
+{ "type": "Feature", "properties": { "type": "couloir", "linked_to": "0C02-4;1, 0C02-2;1, 008-A, 010A", "room": "0C02-3" }, "geometry": { "type": "Point", "coordinates": [ -4.57004959674595, 48.358566082212782 ] } },
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C02-3", "room": "010A" }, "geometry": { "type": "Point", "coordinates": [ -4.570040972873465, 48.35855184288917 ] } },
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C02-2", "room": "010A" }, "geometry": { "type": "Point", "coordinates": [ -4.570170075007458, 48.358511841087051 ] } },
+{ "type": "Feature", "properties": { "type": "couloir", "linked_to": "0C02-3;1, 0C02-1;1, 010A, 014A", "room": "0C02-2" }, "geometry": { "type": "Point", "coordinates": [ -4.570183270917137, 48.358524542034125 ] } },
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C02-2", "room": "014A" }, "geometry": { "type": "Point", "coordinates": [ -4.570186960300182, 48.358506609241395 ] } },
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C02-1", "room": "010A" }, "geometry": { "type": "Point", "coordinates": [ -4.57026113782405, 48.358484763885066 ] } },
+{ "type": "Feature", "properties": { "type": "couloir", "linked_to": "014A, 0C02-2;1, 10E1-0, 0C03-1;1, 016A, B1-0C01-1;1", "room": "0C02-1" }, "geometry": { "type": "Point", "coordinates": [ -4.570298283158432, 48.358491406657777 ] } },
+{ "type": "Feature", "properties": { "type": "escalier", "linked_to": "110E1;1, 0C02-1", "room": "010E1" }, "geometry": { "type": "Point", "coordinates": [ -4.5702975029603, 48.358474081483443 ] } },
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C02-1", "room": "016A" }, "geometry": { "type": "Point", "coordinates": [ -4.570297026567409, 48.358515366797008 ] } },
+{ "type": "Feature", "properties": { "type": "couloir", "linked_to": "0C03-1;1, 016A, 0C03-3;1", "room": "0C03-1" }, "geometry": { "type": "Point", "coordinates": [ -4.570368463246815, 48.358566613123621 ] } },
+{ "type": "Feature", "properties": { "type": "couloir", "linked_to": "0C03-1;1, 0C03-2;1", "room": "0C03-3" }, "geometry": { "type": "Point", "coordinates": [ -4.570406713330199, 48.358626363196883 ] } },
+{ "type": "Feature", "properties": { "type": "couloir", "linked_to": "018A, 020A, 022A, 024A, 026A, 0C01-1;1, 0C03-3;1", "room": "0C03-2" }, "geometry": { "type": "Point", "coordinates": [ -4.570270481657114, 48.358669241059246 ] } },
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C03-2", "room": "018A" }, "geometry": { "type": "Point", "coordinates": [ -4.570326195951886, 48.35864085997634 ] } },
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C03-2", "room": "020A" }, "geometry": { "type": "Point", "coordinates": [ -4.570289618161222, 48.358652638169843 ] } },
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C03-2", "room": "022A" }, "geometry": { "type": "Point", "coordinates": [ -4.570274371487552, 48.358657139916644 ] } },
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C03-2", "room": "024A" }, "geometry": { "type": "Point", "coordinates": [ -4.570240598082472, 48.358666714989255 ] } },
+{ "type": "Feature", "properties": { "type": "door", "linked_to": "0C03-2", "room": "026A" }, "geometry": { "type": "Point", "coordinates": [ -4.57020347052838, 48.35867866351839 ] } },
+{ "type": "Feature", "properties": { "type": "couloir", "linked_to": "0C02-5;1, 0C03-2;1", "room": "0C01-1" }, "geometry": { "type": "Point", "coordinates": [ -4.57012693931468, 48.358711715680137 ] } }
+]
+}
