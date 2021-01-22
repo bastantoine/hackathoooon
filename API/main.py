@@ -17,11 +17,13 @@ def init_app():
         from views.front import front
         from views.pass_api import pass_api
         from views.rooms import rooms
+        from views.itinerary import itinerary
 
         # Register Blueprints
         app.register_blueprint(front)
         app.register_blueprint(pass_api)
         app.register_blueprint(rooms)
+        app.register_blueprint(itinerary)
 
         return app
 

@@ -62,3 +62,7 @@ def convert_rooms_itinerary_to_position_itinerary(itinerary_list):
         current_itinerary_level.append([x, y])
         result_geometry[level] = current_itinerary_level
     return result_geometry
+
+def get_geometry_itinerary(start, destination):
+    itinerary = get_itinerary(start, destination)
+    return convert_rooms_itinerary_to_position_itinerary(itinerary)

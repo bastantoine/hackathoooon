@@ -6,7 +6,7 @@ from flask import (
     request,
 )
 
-pass_api = Blueprint('pass_api', __name__, template_folder='../templates')
+pass_api = Blueprint('pass_api', __name__)
 
 @pass_api.route('/mock/pass/calendar')
 def pass_controller():
