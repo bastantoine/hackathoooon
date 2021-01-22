@@ -46,3 +46,29 @@ L.control.layers({
     "RDC": rdc,
     "Etage": etage
 }).addTo(map);
+
+var current_displayed_path = undefined;
+
+$("#form_itinerary").submit((event) => {
+    event.preventDefault();
+    var start = $("input#start").val()
+    var destination = $("input#destination").val()
+    if(start !== "" && destination !== "") {
+        $.getJSON({
+            url: `${API_URL}/api/itinerary?start=${start}&destination=${destination}`,
+            success: (data) => {
+                var floor_to_use = data.features[0].properties.floor === "1" ? etage: rdc;
+                if(current_displayed_path !== undefined && floor_to_use.hasLayer(current_displayed_path._leaflet_id)) {
+                    floor_to_use.removeLayer(current_displayed_path._leaflet_id);
+                }
+                current_displayed_path = data
+                floor_to_use.addLayer(L.geoJSON(data, {style: (_) => {return {color: '#ff0000'}}}));
+
+                var coordinates = data.features[0].coordinates;
+                floor_to_use.addLayer(L.marker(coordinates[0].reverse()));
+                floor_to_use.addLayer(L.marker(coordinates[coordinates.length - 1].reverse()));
+            },
+            async: false
+        });
+    }
+});
