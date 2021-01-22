@@ -1,5 +1,5 @@
-#retourne 3 fichier, un pour construire les salles du rdc, un pour le 1er étage, un pour les contours du bâtiment
 import json
+import os
 
 from flask import (Blueprint, jsonify)
 
@@ -31,6 +31,13 @@ def geojson_floor1():
             dict_rooms['features'].append(dict_room)
     return(jsonify(dict_rooms))
     
+@geometry.route('/geometry/contour')
+def geojson_contour():
+    SITE_ROOT = os.path.realpath(os.path.dirname(__file__))
+    json_url = os.path.join(SITE_ROOT, "resources", "CONTOUR.json")
+    with open(json_url) as json_file:
+        data = json_file.read()
+    return(data)
 
 def room_parse(room_geometry):
     points = room_geometry.split('|')
