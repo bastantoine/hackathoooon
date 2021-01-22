@@ -28,21 +28,19 @@ def get_itinerary():
         "features": []
     }
     for key in itinerary:
-        features = [
-                {
-                    "type": "Feature",
-                    "properties": {
-                    "start": start,
-                    "end": destination,
-                    "floor": key
-                },
-                "geometry": {
-                    "type": "LineString",
-                    "coordinates": itinerary[key]
-                }
+        feature = {
+                "type": "Feature",
+                "properties": {
+                "start": start,
+                "end": destination,
+                "floor": key
+            },
+            "geometry": {
+                "type": "LineString",
+                "coordinates": itinerary[key]
             }
-        ]
+        }
 
-        geo_json["features"].append(features)
+        geo_json["features"].append(feature)
 
     return jsonify(geo_json)
