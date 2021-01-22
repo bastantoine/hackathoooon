@@ -20,7 +20,7 @@ def template_test():
 
     course = get_current_or_next_course(user_data)
 
-    return render_template('template.html', course=course)
+    return render_template('template.html', course=course, api_url=os.environ.get('API_URL', ''))
 
 def get_current_or_next_course(user_data):
     user_calendar = json.loads(user_data.text)['calendar']
