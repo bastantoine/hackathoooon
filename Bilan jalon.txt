@@ -21,3 +21,13 @@ JALON 8
 
 Abandon de ReactJS par contrainte de temps.
 Création des bdd contenant les salles, et les points du graphe représentant les chemins possibles.
+
+JALON 9
+
+Création de l'API de recherche de chemin, algorithme dijkstra, fonctionnel, le plus court chemin est trouvé
+
+Création des API de récupération de plan
+
+Modification et correction de données de plans
+
+Travail sur l'affichage front-end
