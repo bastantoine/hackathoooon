@@ -7,7 +7,12 @@ from datetime import datetime, timedelta
 
 load_dotenv()
 
-front = Blueprint('front', __name__, template_folder='templates/front')
+front = Blueprint('front',
+                  __name__,
+                  template_folder='templates/front',
+                  static_url_path='',
+                  static_folder='static/front',
+                )
 @front.route('/')
 def template_test():
     # We get the user information from our mocked API
