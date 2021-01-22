@@ -12,6 +12,9 @@ def geojson_floors():
     magic_list = query_db(query)
     print("BENDER BENDER BENDER")
     print(magic_list)
+    '''json_dump = json.dumps(data_set)'''
+
+
 
 if __name__ == "__main__":
     geojson_floors()
