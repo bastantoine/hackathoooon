@@ -33,3 +33,11 @@ In a terminal (make sure you are in the root directory of the repo):
 And now the project should be live at localhost:5000
 
 If you have trouble installing the Python virtualenv (`python3 -m venv venv`) on Windows, see the troubleshooting steps [here](https://github.com/bastantoine/hackathoooon/tree/master/API#windows).
+
+3. Initialize the database
+
+On your browser, go on localhost:5000/rooms/import
+
+Select in your files the geojson files containing the geographical data of the campus.
+
+Press the "Send" button.
