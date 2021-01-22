@@ -1,9 +1,19 @@
-DROP TABLE IF EXISTS room;
+DROP TABLE IF EXISTS rooms;
 
-CREATE TABLE room (
+CREATE TABLE rooms (
 	id INTEGER PRIMARY KEY AUTOINCREMENT,
 	name TINYTEXT NOT NULL,
 	geometry TEXT NOT NULL,
-	room_type ENUM("Salle", "Couloir", "Escalier"),
+	room_type TINYTEXT NOT NULL,
 	door_pos TEXT NOT NULL
+);
+
+DROP TABLE IF EXISTS points;
+
+CREATE TABLE points (
+	id INTEGER PRIMARY KEY AUTOINCREMENT,
+	name TINYTEXT NOT NULL,
+	geometry TEXT NOT NULL,
+	point_type TINYTEXT NOT NULL,
+	linked_to TEXT NOT NULL
 );
