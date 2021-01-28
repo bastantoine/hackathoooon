@@ -40,7 +40,6 @@ def get_itinerary():
                 "coordinates": itinerary[key]
             }
         }
-
         geo_json["features"].append(feature)
 
     return jsonify(geo_json)

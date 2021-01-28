@@ -1,9 +1,16 @@
-import os
-from flask import render_template, Blueprint
-from dotenv import load_dotenv
-import requests
+from datetime import (
+    datetime,
+    timedelta
+)
 import json
-from datetime import datetime, timedelta
+import os
+
+from dotenv import load_dotenv
+from flask import (
+    Blueprint,
+    render_template,
+)
+import requests
 
 load_dotenv()
 
@@ -13,6 +20,7 @@ front = Blueprint('front',
                   static_url_path='',
                   static_folder='static/front',
                 )
+
 @front.route('/')
 def template_test():
     # We get the user information from our mocked API

@@ -20,14 +20,12 @@ def init_app():
         from views.geometry import geometry
         from views.itinerary import itinerary
 
-
         # Register Blueprints
         app.register_blueprint(front)
         app.register_blueprint(pass_api)
         app.register_blueprint(rooms)
         app.register_blueprint(geometry)
         app.register_blueprint(itinerary)
-
 
         return app
 
@@ -38,7 +36,6 @@ if __name__ == "__main__":
     except ValueError:
         DEPLOY_SCALINGO = False
     if DEPLOY_SCALINGO:
-        # We are deploying on Scalingo, let's create the routes for the static files
         try:
             port = int(os.environ.get("PORT", 5000))
         except ValueError:

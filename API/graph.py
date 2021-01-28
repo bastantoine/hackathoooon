@@ -1,4 +1,7 @@
-from dijkstra import Graph, DijkstraSPF
+from dijkstra import (
+    Graph,
+    DijkstraSPF,
+)
 
 from db import query_db
 
